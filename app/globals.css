@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --line-color: #e5e7eb;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  @apply bg-gradient-to-b from-gray-50 to-gray-200 text-gray-900 transition-colors duration-300 ease-in-out;
+}
+
+body.dark {
+  @apply bg-gradient-to-b from-gray-900 to-gray-800 text-gray-200;
+}
+
+.borderBlack {
+  @apply border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg;
+}
+
+.textAccent {
+  @apply text-indigo-600 dark:text-indigo-300 font-semibold;
+}
+
+.highlight {
+  @apply bg-gradient-to-r from-indigo-200 via-teal-200 to-pink-200 
+          dark:from-indigo-600 dark:via-teal-600 dark:to-pink-600 
+          px-2 py-1 rounded-md;
+}
+
+a {
+  @apply text-indigo-500 dark:text-indigo-400 font-medium underline hover:text-indigo-700 dark:hover:text-indigo-300;
+}
